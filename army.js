@@ -31,7 +31,7 @@ client.user.setGame(`,help/\,inv`,"https://www.twitch.tv/hero_bot")
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
-		 message.channel.send('**الأوامر على الخاص** :mailbox_with_mail: ');
+		 message.channel.send('**أوامر الإدارة على الخاص** :mailbox_with_mail: ');
             
 	
 		 
@@ -77,7 +77,7 @@ Hero ملاحظة يجب عليك انشاء رول باسم
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
-		 message.channel.send('**الأوامر على الخاص** :mailbox_with_mail: ');
+		 message.channel.send('**الأوامر العامة على الخاص** :mailbox_with_mail: ');
             
 	
 		 
@@ -115,7 +115,7 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
-		 message.channel.send('**الأوامر على الخاص** :mailbox_with_mail: ');
+		 message.channel.send('**أوامر رفاهية على الخاص** :mailbox_with_mail: ');
             
 	
 		 
@@ -151,7 +151,7 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
-		 message.channel.send('**الأوامر على الخاص** :mailbox_with_mail: ');
+		 message.channel.send('**أوامر الأغاني على الخاص** :mailbox_with_mail: ');
             
 	
 		 
@@ -186,6 +186,8 @@ client.on("message", message => {
     .setColor('RANDOM')
     .setTitle('**bot link**')
     .setURL('http://cuon.io/rEVczg')
+    .setTitle('**donate**')
+    .setURL('https://paypal.me/yousseftube')
     .setAuthor('Hero Bot', 'https://i.imgur.com/cAAUEvy.png', 'https://i.imgur.com/cAAUEvy.png')
     .setThumbnail('https://i.imgur.com/cAAUEvy.png')
     .addBlankField()
