@@ -91,6 +91,9 @@ client.on('message', message => {
 
 :arrow_right: ,image ➾ صورة السرفر
 
+:arrow_right: ,herostart ➾ لجعل الرول يبدل الألوان
+Hero ملاحظة يجب عليك انشاء رول باسم
+:arrow_right: ,herostop ➾ لإيقاف خاصية الألوان
 
 [❖═════════════❖]╗
          أوامر الرفاهية
@@ -99,7 +102,7 @@ client.on('message', message => {
 
 :arrow_right: ,kiss ➾ لتقبيل شخص
 
-:arrow_right: ,hug ➾ لحضن شخص
+:arrow_right: ,hug ➾ بالحضن شخص
 
 :arrow_right: ,cuddle ➾ لصفع شخص تكرهه
 
