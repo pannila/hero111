@@ -42,7 +42,6 @@ client.on('message', message => {
           أوامر الإدارة
 ╚[❖════════════❖]╝
 
-
 :arrow_right: ,kick <mention>  لطرد العضو من السرفر
 
 :arrow_right: ,ban <mention> ➾ لإعطاء العضو  باند
@@ -66,13 +65,28 @@ client.on('message', message => {
 :arrow_right: ,dc ➾ لحذف جميع الرومات الصوتية و الكتابية
 
 :arrow_right: ,herostart ➾ لجعل الرول يبدل الألوان
-Hero ملاحظة يجب عليك انشاء رول باسم
-:arrow_right: ,herostop ➾ لإيقاف خاصية الألوان
 
+Hero ملاحظة يجب عليك انشاء رول باسم
+
+:arrow_right: ,herostop ➾ لإيقاف خاصية الألوان
+**`);
+
+    }
+});	
+
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help") {
+		 message.channel.send('**الأوامر على الخاص** :mailbox_with_mail: ');
+            
+	
+		 
+
+
+ message.author.sendMessage(`**
 ╔[❖════════════❖]╗
             الأوامر العامة
 ╚[❖════════════❖]╝
-
 
 :arrow_right: ,id ➾ لمعرفة معلومات العضو
 
@@ -93,11 +107,24 @@ Hero ملاحظة يجب عليك انشاء رول باسم
 :arrow_right: ,say (text) ➾ يكرر البوت الكلام الي تكتبه
 
 :arrow_right: ,image ➾ صورة السرفر
+**`);
 
+    }
+});	
+
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help") {
+		 message.channel.send('**الأوامر على الخاص** :mailbox_with_mail: ');
+            
+	
+		 
+
+
+ message.author.sendMessage(`**
 [❖═════════════❖]╗
          أوامر الرفاهية
 ╚[❖════════════❖]╝ 
-
 
 :arrow_right: ,kiss ➾ لتقبيل شخص
 
@@ -116,10 +143,25 @@ Hero ملاحظة يجب عليك انشاء رول باسم
 :arrow_right: ,لعبة لو خيروك الشهيرة ➾ لو خيروك
 
 :arrow_right: ,لعبة صراحة هي لعبة عليك أن تلعبها مع أصدقائك ➾ صراحة
+**`);
 
+    }
+});	
+
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help") {
+		 message.channel.send('**الأوامر على الخاص** :mailbox_with_mail: ');
+            
+	
+		 
+
+
+ message.author.sendMessage(`**
 [❖═════════════❖]╗
           أوامر الأغاني
 ╚[❖════════════❖]╝ 
+
 :arrow_right: ,play | ,p ➾ لتشغيل اغنية
 
 :arrow_right: ,stop ➾ لإيقاف الأغنية
@@ -133,7 +175,6 @@ Hero ملاحظة يجب عليك انشاء رول باسم
 :arrow_right: ,pause ➾ لإيقاف الأغنية مؤقتا
 
 :arrow_right: ,resume | ,r ➾ لإكمال الأغنية
-
 **`);
 
     }
