@@ -186,13 +186,11 @@ client.on("message", message => {
     .setColor('RANDOM')
     .setTitle('**bot link**')
     .setURL('http://cuon.io/rEVczg')
-    .setTitle('**donate**')
-    .setURL('https://paypal.me/yousseftube')
     .setAuthor('Hero Bot', 'https://i.imgur.com/cAAUEvy.png', 'https://i.imgur.com/cAAUEvy.png')
     .setThumbnail('https://i.imgur.com/cAAUEvy.png')
     .addBlankField()
     .setTimestamp()
-    .setFooter('thanks for adding bot in your server', 'https://i.imgur.com/cAAUEvy.png');
+    .setFooter('Hero Is Here', 'https://i.imgur.com/cAAUEvy.png');
    message.author.sendEmbed(embed)
     
    }
