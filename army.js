@@ -65,6 +65,9 @@ client.on('message', message => {
 
 :arrow_right: ,dc ➾ لحذف جميع الرومات الصوتية و الكتابية
 
+:arrow_right: ,herostart ➾ لجعل الرول يبدل الألوان
+Hero ملاحظة يجب عليك انشاء رول باسم
+:arrow_right: ,herostop ➾ لإيقاف خاصية الألوان
 
 ╔[❖════════════❖]╗
             الأوامر العامة
@@ -90,10 +93,6 @@ client.on('message', message => {
 :arrow_right: ,say (text) ➾ يكرر البوت الكلام الي تكتبه
 
 :arrow_right: ,image ➾ صورة السرفر
-
-:arrow_right: ,herostart ➾ لجعل الرول يبدل الألوان
-Hero ملاحظة يجب عليك انشاء رول باسم
-:arrow_right: ,herostop ➾ لإيقاف خاصية الألوان
 
 [❖═════════════❖]╗
          أوامر الرفاهية
