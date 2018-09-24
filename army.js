@@ -287,7 +287,14 @@ message.channel.send(embed)
 
 
 });
+client.on('message', msg => {
+  const DiscordLink = ["discord.gg", "discordapp.com/invite", "gg", "discord.gg"];
+  if( DiscordLink.some(word => msg.content.includes(word)) ) {
+    msg.reply(`⛔ | يمنع نشر روابط الدعوة .. انتبه لنفسك`)
+    msg.delete();
 
+}
+})
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
