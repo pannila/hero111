@@ -91,7 +91,6 @@ client.on("message", message => {
 :arrow_right: ,ct <name> ➾ لإنشاء روم كتابي
 :arrow_right: ,cv <name> لإنشاء روم صوتي
 :arrow_right: ,bc <message> ➾ لإرسال برودكاست لأعضاء السرفر
-:arrow_right: ,bc1 <message> ➾ لإرسال برودكاست لأعضاء السرفر بشكل اخر
 :arrow_right: ,roll <number> ➾ لإعطاء رول للعضو
 :arrow_right: ,setvoice ➾ عدد الاشخاص الموجودين  في الرومات الصوتية
 :arrow_right: ,allbots ➾ لمعرفة كم عدد البوتات الموجودة في السرفر
@@ -335,25 +334,21 @@ if (message.content.startsWith(",kick")) {
     message.channel.send("تم أعطاء كيك الى : " + mention.tag);
 };
 });
-client.on('message', async msg =>{
-	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith(prefix)) return undefined;
-    
-    let args = msg.content.split(' ');
-
-	let command = msg.content.toLowerCase().split(" ")[0];
-	command = command.slice(prefix.length)
-
-    if(command === `ping`) {
-    let embed = new Discord.RichEmbed()
-    .setColor(3447003)
-    .setTitle("Ping!!")
-    .setDescription(`${client.ping} ms,`)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    msg.delete().catch(O_o=>{})
-    msg.channel.send(embed);
-    }
-});
+	client.on('message', message => {
+                                if(!message.channel.guild) return;
+                        if (message.content.startsWith(',ping')) {
+                            if(!message.channel.guild) return;
+                            var msg = `${Date.now() - message.createdTimestamp}`
+                            var api = `${Math.round(client.ping)}`
+                            if (message.author.bot) return;
+                        let embed = new Discord.RichEmbed()
+                        .setAuthor(message.author.username,message.author.avatarURL)
+                        .setColor('RANDOM')
+                        .addField('**Time Taken:**',msg + " ms :signal_strength: ")
+                        .addField('**WebSocket:**',api + " ms :signal_strength: ")
+         message.channel.send({embed:embed});
+                        }
+                    });
 client.on('message', omar => {
 var prefix = ",";
 if(omar.content.split(' ')[0] == prefix + 'dc') {  // delete all channels
@@ -612,28 +607,6 @@ if (message.content.startsWith(prefix+"cv")) {
                 message.guild.createChannel(`${argrst}`,'voice')
           
         }
-});
-client.on('message', message => {
-    if (message.author.id === client.user.id) return;
-    if (message.guild) {
-   let embed = new Discord.RichEmbed()
-    let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc1') {
-    if (!args[1]) {
-return;
-}
-        message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
-            var bc = new Discord.RichEmbed()
-            .addField(' » الرسالة : ', args)
-            .setColor('#ff0000')
-            // m.send(`[${m}]`);
-            m.send(`${m}`,{embed: bc});
-        });
-    }
-    } else {
-        return;
-    }
 });
 client.on('message', function(message) {
     if(message.content.startsWith(prefix + 'roll')) {
