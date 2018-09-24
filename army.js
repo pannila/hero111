@@ -28,157 +28,143 @@ client.user.setGame(`,help/\,inv`,"https://www.twitch.tv/hero_bote")
   console.log('')
 });
 
-client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "help") {
-		 message.channel.send('**أوامر الإدارة على الخاص** :mailbox_with_mail: ');
-            
-	
-		 
+client.on("message", message => {
+ if (message.content === ",help") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`
+	  
+	         Please Chose: 
 
+			 
+,help-public ⇏ اوامر عامة
 
- message.author.sendMessage(`**
-╔[❖════════════❖]╗
-          أوامر الإدارة
-╚[❖════════════❖]╝
+,help-admin ⇏ اوامر ادارة السيرفر
+			 
+,help-games ⇏ اوامر الالعاب
 
+,help-music ⇏ اوامر الموسيقى
+
+,help-color ⇏ اوامر الألوان
+
+	  `)
+   message.channel.sendEmbed(embed)
+    
+   }
+   }); 
+   
+client.on("message", message => {
+ if (message.content === ",help-public") {
+	 message.channel.send('**الأوامر العامة على الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+	  أوامر عامة
+	  
+:arrow_right: ,id ➾ لمعرفة معلومات العضو
+:arrow_right: ,avatar ➾ your avatar account
+:arrow_right: ,server ➾ معلومات السرفر
+:arrow_right: ,inv ➾ لاستدعاء البوت إلى سرفرك
+:arrow_right: ,user ➾ info members
+:arrow_right: ,emojilist ➾ لإظهار الإيموجيات
+:arrow_right: ,ping ➾ سرعة اتصال البوت
+:arrow_right: ,report @mention قبل كل شيء عليك أن تنشئ روم بإسم ➾ السبب {reports}
+:arrow_right: ,say (text) ➾ يكرر البوت الكلام الي تكتبه
+:arrow_right: ,image ➾ صورة السرفر
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   });   
+
+client.on("message", message => {
+ if (message.content === ",help-admin") {
+	 message.channel.send('**الأوامر الإدارية على الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+	  أوامر الإدارة
+	  
 :arrow_right: ,kick <mention>  لطرد العضو من السرفر
-
 :arrow_right: ,ban <mention> ➾ لإعطاء العضو  باند
-
 :arrow_right: ,clear ➾ clear (عدد الرسائل)
-
 :arrow_right: ,ct <name> ➾ لإنشاء روم كتابي
-
 :arrow_right: ,cv <name> لإنشاء روم صوتي
-
 :arrow_right: ,bc <message> ➾ لإرسال برودكاست لأعضاء السرفر
-
 :arrow_right: ,roll <number> ➾ لإعطاء رول للعضو
-
 :arrow_right: ,setvoice ➾ عدد الاشخاص الموجودين  في الرومات الصوتية
-
 :arrow_right: ,allbots ➾ لمعرفة كم عدد البوتات الموجودة في السرفر
-
 :arrow_right: ,dr ➾ لحذف جميع الرولات
-
 :arrow_right: ,dc ➾ لحذف جميع الرومات الصوتية و الكتابية
 
-:arrow_right: ,herostart ➾ لجعل الرول يبدل الألوان
-
-Hero ملاحظة يجب عليك انشاء رول باسم
-
-:arrow_right: ,herostop ➾ لإيقاف خاصية الألوان
-**`);
-
-    }
-});	
-
-client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "help") {
-		 message.channel.send('**الأوامر العامة على الخاص** :mailbox_with_mail: ');
-            
-	
-		 
-
-
- message.author.sendMessage(`**
-╔[❖════════════❖]╗
-            الأوامر العامة
-╚[❖════════════❖]╝
-
-:arrow_right: ,id ➾ لمعرفة معلومات العضو
-
-:arrow_right: ,avatar ➾ your avatar account
-
-:arrow_right: ,server ➾ معلومات السرفر
-
-:arrow_right: ,inv ➾ لاستدعاء البوت إلى سرفرك
-
-:arrow_right: ,user ➾ info members
-
-:arrow_right: ,emojilist ➾ لإظهار الإيموجيات
-
-:arrow_right: ,ping ➾ سرعة اتصال البوت
-
-:arrow_right: ,report @mention قبل كل شيء عليك أن تنشئ روم بإسم ➾ السبب {reports}
-
-:arrow_right: ,say (text) ➾ يكرر البوت الكلام الي تكتبه
-
-:arrow_right: ,image ➾ صورة السرفر
-**`);
-
-    }
-});	
-
-client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "help") {
-		 message.channel.send('**أوامر رفاهية على الخاص** :mailbox_with_mail: ');
-            
-	
-		 
-
-
- message.author.sendMessage(`**
-[❖═════════════❖]╗
-         أوامر الرفاهية
-╚[❖════════════❖]╝ 
-
-:arrow_right: ,kiss ➾ لتقبيل شخص
-
-:arrow_right: ,hug ➾ بالحضن شخص
-
-:arrow_right: ,cuddle ➾ لصفع شخص تكرهه
-
-:arrow_right: ,pat ➾ لمداعبة شخص ما
-
-:arrow_right: ,tickle ➾ لإحراج شخص
-
-:arrow_right: ,crazy ➾ لوصف شخص بالمجنون
-
-:arrow_right: ,gay ➾ gay لوصف شخص بال
-
-:arrow_right: ,لعبة لو خيروك الشهيرة ➾ لو خيروك
-
-:arrow_right: ,لعبة صراحة هي لعبة عليك أن تلعبها مع أصدقائك ➾ صراحة
-**`);
-
-    }
-});	
-
-client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "help") {
-		 message.channel.send('**أوامر الأغاني على الخاص** :mailbox_with_mail: ');
-            
-	
-		 
-
-
- message.author.sendMessage(`**
-[❖═════════════❖]╗
-          أوامر الأغاني
-╚[❖════════════❖]╝ 
-
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   });
+   
+client.on("message", message => {
+ if (message.content === ",help-music") {
+	 message.channel.send('**أوامر الأغاني على الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+	  أوامر الأغاني
+	  
 :arrow_right: ,play | ,p ➾ لتشغيل اغنية
-
 :arrow_right: ,stop ➾ لإيقاف الأغنية
-
 :arrow_right: ,skip | ,s ➾ تخطي الأغنية
-
 :arrow_right: ,np ➾ لإظهار المشغلة حاليا
-
 :arrow_right: ,volume | ,v ➾ حجم الصوت
-
 :arrow_right: ,pause ➾ لإيقاف الأغنية مؤقتا
-
 :arrow_right: ,resume | ,r ➾ لإكمال الأغنية
-**`);
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   });
 
-    }
-});	
+   client.on("message", message => {
+ if (message.content === ",help-games") {
+	 message.channel.send('**أوامر التسلية على الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+	  أومر التسلية
+	  
+:arrow_right: ,kiss ➾ لتقبيل شخص
+:arrow_right: ,hug ➾ بالحضن شخص
+:arrow_right: ,cuddle ➾ لصفع شخص تكرهه
+:arrow_right: ,pat ➾ لمداعبة شخص ما
+:arrow_right: ,tickle ➾ لإحراج شخص
+:arrow_right: ,crazy ➾ لوصف شخص بالمجنون
+:arrow_right: ,gay ➾ gay لوصف شخص بال
+:arrow_right: ,لعبة لو خيروك الشهيرة ➾ لو خيروك
+:arrow_right: ,لعبة صراحة هي لعبة عليك أن تلعبها مع أصدقائك ➾ صراحة
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   });
+   
+   client.on("message", message => {
+ if (message.content === ",help-color") {
+	 message.channel.send('**الأوامر على الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+	  .setImage("https://i.imgur.com/am5MqkO.gif")
+      .setDescription(`
+	  أوامر الرول الملون
+	  
+	  Hero ملاحظة يجب عليك انشاء رول باسم
+
+:arrow_right: ,herostart ➾ لجعل الرول يبدل الألوان
+:arrow_right: ,herostop ➾ لإيقاف خاصية الألوان	  
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   });
 client.on("message", message => {
  if (message.content === prefix + "inv") {
 	  message.channel.send('**تم ارسال لك في الخاص** :mailbox_with_mail: ');
