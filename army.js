@@ -36,7 +36,7 @@ client.on("message", message => {
 	  
 	         Please Chose: 
 
-			 
+**			 
 ,help-public ⇏ اوامر عامة
 
 ,help-admin ⇏ اوامر ادارة السيرفر
@@ -47,7 +47,7 @@ client.on("message", message => {
 
 ,help-color ⇏ اوامر الألوان
 
-	  `)
+	  **`)
    message.channel.sendEmbed(embed)
     
    }
@@ -60,18 +60,18 @@ client.on("message", message => {
       .setColor("#000000")
       .setDescription(`
 	  أوامر عامة
-	  
-:arrow_right: ,id ➾ لمعرفة معلومات العضو
-:arrow_right: ,avatar ➾ your avatar account
-:arrow_right: ,server ➾ معلومات السرفر
-:arrow_right: ,inv ➾ لاستدعاء البوت إلى سرفرك
-:arrow_right: ,user ➾ info members
-:arrow_right: ,emojilist ➾ لإظهار الإيموجيات
-:arrow_right: ,ping ➾ سرعة اتصال البوت
-:arrow_right: ,report @mention قبل كل شيء عليك أن تنشئ روم بإسم ➾ السبب {reports}
-:arrow_right: ,say (text) ➾ يكرر البوت الكلام الي تكتبه
-:arrow_right: ,image ➾ صورة السرفر
-`)
+**	  
+,id ➾ لمعرفة معلومات العضو
+,avatar ➾ your avatar account
+,server ➾ معلومات السرفر
+,inv ➾ لاستدعاء البوت إلى سرفرك
+,user ➾ info members
+,emojilist ➾ لإظهار الإيموجيات
+,ping ➾ سرعة اتصال البوت
+,report @mention قبل كل شيء عليك أن تنشئ روم بإسم ➾ السبب {reports}
+,say (text) ➾ يكرر البوت الكلام الي تكتبه
+,image ➾ صورة السرفر
+**`)
    message.author.sendEmbed(embed)
     
    }
@@ -84,19 +84,19 @@ client.on("message", message => {
       .setColor("#000000")
       .setDescription(`
 	  أوامر الإدارة
-	  
-:arrow_right: ,kick <mention>  لطرد العضو من السرفر
-:arrow_right: ,ban <mention> ➾ لإعطاء العضو  باند
-:arrow_right: ,clear ➾ clear (عدد الرسائل)
-:arrow_right: ,ct <name> ➾ لإنشاء روم كتابي
-:arrow_right: ,cv <name> لإنشاء روم صوتي
-:arrow_right: ,bc <message> ➾ لإرسال برودكاست لأعضاء السرفر
-:arrow_right: ,roll <number> ➾ لإعطاء رول للعضو
-:arrow_right: ,setvoice ➾ عدد الاشخاص الموجودين  في الرومات الصوتية
-:arrow_right: ,allbots ➾ لمعرفة كم عدد البوتات الموجودة في السرفر
-:arrow_right: ,dr ➾ لحذف جميع الرولات
-:arrow_right: ,dc ➾ لحذف جميع الرومات الصوتية و الكتابية
-
+**	  
+,kick <mention>  لطرد العضو من السرفر
+,ban <mention> ➾ لإعطاء العضو  باند
+,clear ➾ clear (عدد الرسائل)
+,ct <name> ➾ لإنشاء روم كتابي
+,cv <name> لإنشاء روم صوتي
+,bc <message> ➾ لإرسال برودكاست لأعضاء السرفر
+,roll <number> ➾ لإعطاء رول للعضو
+,setvoice ➾ عدد الاشخاص الموجودين  في الرومات الصوتية
+,allbots ➾ لمعرفة كم عدد البوتات الموجودة في السرفر
+,dr ➾ لحذف جميع الرولات
+,dc ➾ لحذف جميع الرومات الصوتية و الكتابية
+**
 `)
    message.author.sendEmbed(embed)
     
@@ -110,15 +110,15 @@ client.on("message", message => {
       .setColor("#000000")
       .setDescription(`
 	  أوامر الأغاني
-	  
-:arrow_right: ,play | ,p ➾ لتشغيل اغنية
-:arrow_right: ,stop ➾ لإيقاف الأغنية
-:arrow_right: ,skip | ,s ➾ تخطي الأغنية
-:arrow_right: ,np ➾ لإظهار المشغلة حاليا
-:arrow_right: ,volume | ,v ➾ حجم الصوت
-:arrow_right: ,pause ➾ لإيقاف الأغنية مؤقتا
-:arrow_right: ,resume | ,r ➾ لإكمال الأغنية
-`)
+**	  
+,play | ,p ➾ لتشغيل اغنية
+,stop ➾ لإيقاف الأغنية
+,skip | ,s ➾ تخطي الأغنية
+,np ➾ لإظهار المشغلة حاليا
+,volume | ,v ➾ حجم الصوت
+,pause ➾ لإيقاف الأغنية مؤقتا
+,resume | ,r ➾ لإكمال الأغنية
+**`)
    message.author.sendEmbed(embed)
     
    }
@@ -131,17 +131,17 @@ client.on("message", message => {
       .setColor("#000000")
       .setDescription(`
 	  أومر التسلية
-	  
-:arrow_right: ,kiss ➾ لتقبيل شخص
-:arrow_right: ,hug ➾ بالحضن شخص
-:arrow_right: ,cuddle ➾ لصفع شخص تكرهه
-:arrow_right: ,pat ➾ لمداعبة شخص ما
-:arrow_right: ,tickle ➾ لإحراج شخص
-:arrow_right: ,crazy ➾ لوصف شخص بالمجنون
-:arrow_right: ,gay ➾ gay لوصف شخص بال
-:arrow_right: ,لعبة لو خيروك الشهيرة ➾ لو خيروك
-:arrow_right: ,لعبة صراحة هي لعبة عليك أن تلعبها مع أصدقائك ➾ صراحة
-`)
+**	  
+,kiss ➾ لتقبيل شخص
+,hug ➾ بالحضن شخص
+,cuddle ➾ لصفع شخص تكرهه
+,pat ➾ لمداعبة شخص ما
+,tickle ➾ لإحراج شخص
+,crazy ➾ لوصف شخص بالمجنون
+,gay ➾ gay لوصف شخص بال
+,لعبة لو خيروك الشهيرة ➾ لو خيروك
+,لعبة صراحة هي لعبة عليك أن تلعبها مع أصدقائك ➾ صراحة
+**`)
    message.author.sendEmbed(embed)
     
    }
