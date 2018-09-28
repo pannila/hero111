@@ -154,25 +154,6 @@ client.on("message", message => {
     
    }
    });
-   
-   client.on("message", message => {
- if (message.content === ",help-color") {
-	 message.channel.send('**الأوامر على الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
-	  .setImage("https://i.imgur.com/am5MqkO.gif")
-      .setDescription(`
-	  أوامر الرول الملون
-	  
-	  Hero ملاحظة يجب عليك انشاء رول باسم
-
-:arrow_right: ,herostart ➾ لجعل الرول يبدل الألوان
-:arrow_right: ,herostop ➾ لإيقاف خاصية الألوان	  
-`)
-   message.author.sendEmbed(embed)
-    
-   }
-   });
 client.on('message', message => {
 	                  if(!message.channel.guild) return;
     if(message.content.startsWith(prefix + 'bc')) {
