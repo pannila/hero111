@@ -53,8 +53,6 @@ client.on("message", message => {
 
 ,help-music ⇏ اوامر الموسيقى
 
-,help-color ⇏ اوامر الألوان
-
 	  **`)
    message.channel.sendEmbed(embed)
     
