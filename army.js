@@ -274,35 +274,30 @@ message.channel.send(embed)
 
 
 });
-client.on('message', msg => {
-  const DiscordLink = ["discord.gg", "discordapp.com/invite", "gg", "discord.gg"];
-  if( DiscordLink.some(word => msg.content.includes(word)) ) {
-    msg.reply(`⛔ | يمنع نشر روابط الدعوة .. انتبه لنفسك`)
-    msg.delete();
-
-}
-})
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return;
-    let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField(':running_shirt_with_sash: | name :  ',`${member}`)
-        .addField(':loudspeaker: | اطلق من دخل' , `Welcome to the server, ${member}`)
-        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
-                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
-               
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                     
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
-                                       
-     .setFooter(`${member.guild.name}`)
-        .setTimestamp()
-   
-      channel.sendEmbed(embed);
-    });
+  let channel = member.guild.channels.find('name','welcome');
+     if (!channel) return; 
+          let memberavatar = member.user.avatarURL
+        let embed = new Discord.RichEmbed()
+    .setThumbnail(memberavatar)
+       .setColor('BLUE')
+       .addField(':sunflower:  حياك الله منور السيرفر',`**[ ${member} ]**`,true)
+       .addField(':levitate: انت العضو رقم',`**[ ${member.guild.memberCount} ]**`,true)
+       channel.send(`401048878520074251`)
+     channel.send({embed:embed});
+});
+client.on('guildMemberRemove', member => {
+      let channel = member.guild.channels.find('name', 'welcome');
+        if (!channel) return; 
+        let memberavatar = member.user.avatarURL
+      let embed = new Discord.RichEmbed()
+          .setColor('RED')
+          .setThumbnail(member.avatar)
+          .addField(':x: لقد خرج ',`**[ ${member} ]**`,true)
+          .addField(':man_dancing:  تبقي',`**[ ${member.guild.memberCount} ]**`,true)      
+          channel.send(`401048878520074251`)
+        channel.send({embed:embed});
+      });
 client.on('message', message => { 
 let prefix = ','
     if (message.content.startsWith(prefix + 'emojilist')) {
@@ -318,6 +313,7 @@ let prefix = ','
         message.channel.send(EmojiList) 
     }
 });
+
 client.on('message', message => {
 if (message.content.startsWith(",kick")) {
     var mention = message.mentions.members.first();
@@ -453,20 +449,6 @@ var prefix = ",";
             message.channel.send(Math.floor(Math.random() * args))
         }
     });
-    client.on('guildMemberRemove', member => {
-        var embed = new Discord.RichEmbed()
-        .setAuthor(member.user.username, member.user.avatarURL)
-        .setThumbnail(member.user.avatarURL)
-        .setTitle(`Ok bye :raised_hand::skin-tone-1: :pensive:`)
-        .setDescription(`مع السلامه تشرفنا بك :raised_hand::skin-tone-1: :pensive: `)
-        .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-        .setColor('RANDOM')
-        .setFooter(`god bye`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
-    
-    var channel =member.guild.channels.find('name', 'welcome')
-    if (!channel) return;
-    channel.send({embed : embed});
-    })
 
   
   var Himo_04 = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png","https://f.top4top.net/p_8816hvic1.png","https://d.top4top.net/p_882020461.png","https://e.top4top.net/p_882s3ftn1.png","https://a.top4top.net/p_882eg9c51.png","https://c.top4top.net/p_882xkcqd1.png","https://f.top4top.net/p_882w7pdi1.png","https://a.top4top.net/p_882gcpmo1.png"]
