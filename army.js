@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const stripIndents = require('common-tags').stripIndents;
+const figlet = require('figlet');
 const prefix = ','
 
 client.on('ready', () => {
@@ -26,6 +28,18 @@ client.user.setGame(`,help/\,inv`,"https://www.twitch.tv/hero_bote")
   console.log('╚[════════════]╝')
   console.log('')
   console.log('')
+});
+
+client.on('message', message => {
+	var prefix = ",";
+if (message.content.startsWith(prefix + 'tag')) {
+    let args = message.content.split(" ").slice(1);
+if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');  
+
+    figlet(args.join(" "), (err, data) => {
+              message.channel.send("```" + data + "```")
+           })
+}
 });
 
 client.on("message", message => {
