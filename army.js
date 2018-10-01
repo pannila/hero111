@@ -85,6 +85,7 @@ client.on("message", message => {
 ,server ➾ معلومات السرفر
 ,inv ➾ لاستدعاء البوت إلى سرفرك
 ,user ➾ info members
+,tag (text) ➾ لكتابة النص بشكل عجيب
 ,emojilist ➾ لإظهار الإيموجيات
 ,ping ➾ سرعة اتصال البوت
 ,report @mention قبل كل شيء عليك أن تنشئ روم بإسم ➾ السبب {reports}
