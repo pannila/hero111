@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const stripIndents = require('common-tags').stripIndents;
 const figlet = require('figlet');
 const prefix = ',';
 
