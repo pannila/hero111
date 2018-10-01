@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const sql = require("sqlite");
 const client = new Discord.Client();
 const figlet = require('figlet');
 const prefix = ',';
@@ -39,6 +40,26 @@ if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');
               message.channel.send("```" + data + "```")
            })
 }
+});
+
+ client.on('message', message => {
+	 var prefix = ",";
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  
+ 
+
+if (command == "z") {
+    let say = new Discord.RichEmbed()
+        .setTitle('Text emboss :')
+   message.channel.send(`\n ${zalgo(args.join(' '))}`);
+  }
+
 });
 
 client.on("message", message => {
