@@ -41,27 +41,6 @@ if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');
            })
 }
 });
-
- client.on('message', message => {
-	 var prefix = ",";
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-  
- 
-
-if (command == "z") {
-    let say = new Discord.RichEmbed()
-        .setTitle('Text emboss :')
-   message.channel.send(`\n ${zalgo(args.join(' '))}`);
-  }
-
-});
-
 client.on("message", message => {
  if (message.content === ",help") {
   const embed = new Discord.RichEmbed()  
