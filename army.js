@@ -285,6 +285,12 @@ client.on('message', message => {
   })
 }
 });
+client.on('guildMemberAdd', member => {
+  if(active === true) {
+    var role = member.guild.roles.find("name", "Member");
+    member.addRole(role).catch(console.error);
+  }
+})
 
 client.on("message", message => {
     const prefix = ","
