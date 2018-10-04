@@ -334,7 +334,6 @@ client.on('guildMemberAdd', member => {
        .setColor('BLUE')
        .addField(':sunflower:  حياك الله منور السيرفر',`**[ ${member} ]**`,true)
        .addField(':levitate: انت العضو رقم',`**[ ${member.guild.memberCount} ]**`,true)
-       channel.send(`401048878520074251`)
      channel.send({embed:embed});
 });
 client.on('guildMemberRemove', member => {
@@ -346,7 +345,6 @@ client.on('guildMemberRemove', member => {
           .setThumbnail(member.avatar)
           .addField(':x: لقد خرج ',`**[ ${member} ]**`,true)
           .addField(':man_dancing:  تبقي',`**[ ${member.guild.memberCount} ]**`,true)      
-          channel.send(`401048878520074251`)
         channel.send({embed:embed});
       });
 client.on('message', message => { 
