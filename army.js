@@ -100,6 +100,7 @@ client.on("message", message => {
 ,ping ➾ سرعة اتصال البوت
 ,report @mention قبل كل شيء عليك أن تنشئ روم بإسم ➾ السبب {reports}
 ,say (text) ➾ يكرر البوت الكلام الي تكتبه
+,invites ➾ عدد الأشخاص الذي دعوتهم للسرفر
 ,image ➾ صورة السرفر
 **`)
    message.author.sendEmbed(embed)
@@ -572,6 +573,22 @@ client.on('message',async message => {
     message.channel.send(iMs);
   }
 });
+client.on('message', message => { // Leaked by [ @M3a4x ]
+   if(message.content.startsWith(prefix + "invites")) {
+    message.guild.fetchInvites().then(invs => {
+      var user = message.mentions.users.first() || message.author
+      var personalInvites = invs.filter(i => i.inviter.id === user.id);
+      var inviteCount = personalInvites.reduce((p, v) => v.uses + p, 0);
+              var mmmmEmbed = new Discord.RichEmbed()
+                         .setAuthor(client.user.username)
+                         .setThumbnail(message.author.avatarURL)
+ .addField(` لقد قمت بدعوة :`, ` ${inviteCount} `)
+           .setFooter(`- Requested By: ${message.author.tag}`);
+           message.channel.send(mmmmEmbed)
+});
+  }
+});
+
    client.on('message',function(message) {
   if (message.author.bot) return;
 var prefix = ",";
