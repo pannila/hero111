@@ -71,13 +71,15 @@ client.on("message", message => {
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 **			 
-,help-public ⇏ اوامر عامة
+,help-p ⇏ اوامر عامة
 
-,help-admin ⇏ اوامر ادارة السيرفر
+,help-a ⇏ اوامر ادارة السيرفر
 			 
-,help-games ⇏ اوامر الالعاب
+,help-g ⇏ اوامر الالعاب
 
-,help-music ⇏ اوامر الموسيقى
+,help-m ⇏ اوامر الموسيقى
+
+,help-c ⇏ اوامر الألوان
 
 	  **`)
    message.channel.sendEmbed(embed)
@@ -86,7 +88,7 @@ client.on("message", message => {
    }); 
    
 client.on("message", message => {
- if (message.content === ",help-public") {
+ if (message.content === ",help-p") {
 	 message.channel.send('**الأوامر العامة على الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("#000000")
@@ -112,7 +114,7 @@ client.on("message", message => {
    });   
 
 client.on("message", message => {
- if (message.content === ",help-admin") {
+ if (message.content === ",help-a") {
 	 message.channel.send('**الأوامر الإدارية على الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("#000000")
@@ -139,7 +141,7 @@ client.on("message", message => {
    });
    
 client.on("message", message => {
- if (message.content === ",help-music") {
+ if (message.content === ",help-m") {
 	 message.channel.send('**أوامر الأغاني على الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("#000000")
@@ -160,7 +162,7 @@ client.on("message", message => {
    });
 
    client.on("message", message => {
- if (message.content === ",help-games") {
+ if (message.content === ",help-g") {
 	 message.channel.send('**أوامر التسلية على الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("#000000")
@@ -170,6 +172,26 @@ client.on("message", message => {
 ,rps ➾ لعبة حجر ورقة مقص
 ,لعبة لو خيروك الشهيرة ➾ لو خيروك
 ,لعبة صراحة هي لعبة عليك أن تلعبها مع أصدقائك ➾ صراحة
+**`)
+   message.author.sendEmbed(embed)
+    
+   }
+   });
+client.on("message", message => {
+ if (message.content === ",help-c") {
+	 message.channel.send('**أوامر الأغاني على الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+        اوامر الألوان
+**	  
+Hero يجب عليك انشاء رول باسم
+You must create a Role in the name of Hero
+
+,herostart ➾ لتشغيل خاصية الرول الملون
+
+,herostop ➾ لإيقاف الخاصية
+
 **`)
    message.author.sendEmbed(embed)
     
@@ -1787,7 +1809,7 @@ client.on("message", message => {
   if (message.content === prefix + "herostart") {
     if(allowedUsers.includes(message.author.id)) {
     setInterval(() => { discoRole(); }, config.ms);
-    message.channel.send("```css\nDiscoing...```");
+    message.channel.send("```css\nI've starting```");
   } else {
     message.reply(`You do not have permission to Hero bot. Please contact with owner bot **youssef_tube#5800**`);
   }
@@ -1795,7 +1817,7 @@ client.on("message", message => {
  
 if (message.content === prefix + "herostop") {
   if(allowedUsers.includes(message.author.id)) {
-  message.channel.send("I've stopped discoing.");
+  message.channel.send("```css\nI've stopped.```");
   setTimeout(() => { console.log(process.exit(0)); }, 300);
 } else {
   message.reply(`You do not have permission to Hero bot. Please contact with owner bot **youssef_tube#5800**`);
