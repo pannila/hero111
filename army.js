@@ -11,6 +11,9 @@ const queue = new Map();
 const ytdl = require('ytdl-core');
 const fs = require('fs');
 const gif = require("gif-search");
+const config = require('./config.json');
+const allowedUsers = config.allowedUsers;
+const roles = config.roleToDisco;
 const prefix = ',';
 
 
@@ -1768,5 +1771,37 @@ function play(guild, song) {
 
 	serverQueue.textChannel.send(`**${song.title}**, is now playing!`);
 }
+
+client.on("message", message => {
+ 
+  function discoRole() {
+    let random = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    roles.forEach((role) => {
+      let theRole = message.guild.roles.find("name", role);
+      theRole.edit({color: random}).catch(e => {
+        return
+      });
+    });
+  }
+ 
+  if (message.content === prefix + "herostart") {
+    if(allowedUsers.includes(message.author.id)) {
+    setInterval(() => { discoRole(); }, config.ms);
+    message.channel.send("```css\nDiscoing...```");
+  } else {
+    message.reply(`You do not have permission to Hero bot. Please contact with owner bot **youssef_tube#5800**`);
+  }
+} else
+ 
+if (message.content === prefix + "herostop") {
+  if(allowedUsers.includes(message.author.id)) {
+  message.channel.send("I've stopped discoing.");
+  setTimeout(() => { console.log(process.exit(0)); }, 300);
+} else {
+  message.reply(`You do not have permission to Hero bot. Please contact with owner bot **youssef_tube#5800**`);
+  }
+}
+ 
+});
 
 client.login(process.env.BOT_TOKEN);
