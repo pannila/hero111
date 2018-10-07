@@ -1811,7 +1811,7 @@ client.on("message", message => {
     setInterval(() => { discoRole(); }, config.ms);
     message.channel.send("```css\nI've starting```");
   } else {
-    message.reply(`You do not have permission to Hero bot. Please contact with owner bot **youssef_tube#5800**`);
+    message.reply(`You do not have permission to Hero bot. Please contact with owner bot **<@403640956571615243>**`);
   }
 } else
  
@@ -1820,7 +1820,7 @@ if (message.content === prefix + "herostop") {
   message.channel.send("```css\nI've stopped.```");
   setTimeout(() => { console.log(process.exit(0)); }, 300);
 } else {
-  message.reply(`You do not have permission to Hero bot. Please contact with owner bot **youssef_tube#5800**`);
+  message.reply(`You do not have permission to Hero bot. Please contact with owner bot **<@403640956571615243>**`);
   }
 }
  
