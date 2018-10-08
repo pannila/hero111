@@ -326,11 +326,6 @@ client.on("message", message => {
     .setColor('RANDOM')
     .setTitle('**bot link**')
     .setURL('http://cuon.io/rEVczg')
-    .setAuthor('Hero Bot', 'https://i.imgur.com/ocnPfvP.png', 'https://i.imgur.com/ocnPfvP.png')
-    .setThumbnail('https://i.imgur.com/ocnPfvP.png')
-    .addBlankField()
-    .setTimestamp()
-    .setFooter('Hero Is Here', 'https://i.imgur.com/ocnPfvP.png');
    message.author.sendEmbed(embed)
     
    }
