@@ -19,7 +19,7 @@ const prefix = ',';
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`,help/\,inv`,"https://www.twitch.tv/hero_bote")
+client.user.setGame(`,help/\,inv`)
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
