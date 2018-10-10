@@ -179,7 +179,7 @@ client.on("message", message => {
    });
 client.on("message", message => {
  if (message.content === ",help-c") {
-	 message.channel.send('**أوامر الأغاني على الخاص** :mailbox_with_mail: ');
+	 message.channel.send('**اوامر الألوان على الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("#000000")
       .setDescription(`
