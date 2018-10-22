@@ -81,6 +81,8 @@ client.on("message", message => {
 
 ,help-c ⇏ اوامر الألوان
 
+,help-w ⇏ أمر الترحيب
+
 	  **`)
    message.channel.sendEmbed(embed)
     
@@ -197,6 +199,16 @@ You must create a Role in the name of Hero
     
    }
    });
+client.on("message", message => {
+ if (message.content === ",help-w") {
+	 message.channel.send('**الأوامر العامة على الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+	  أوامر عامة
+**
+,weclome-on (channel) ➾ لتفعيل خاصية الترحيب مع صورة جاهزة
+**`)
 client.on('message' , async (message) => {
        if(message.content.startsWith(prefix + "rps")) {
               let args = message.content.split(" ").slice(1);
