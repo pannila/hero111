@@ -129,6 +129,7 @@ client.on("message", message => {
 ,ct <name> ➾ لإنشاء روم كتابي
 ,cv <name> لإنشاء روم صوتي
 ,bc <message> ➾ لإرسال برودكاست لأعضاء السرفر
+,weclome-on (channel) ➾ لتفعيل خاصية الترحيب مع صورة جاهزة
 ,roll <number> ➾ قرعة
 ,setvoice ➾ عدد الاشخاص الموجودين  في الرومات الصوتية
 ,allbots ➾ لمعرفة كم عدد البوتات الموجودة في السرفر
@@ -199,16 +200,7 @@ You must create a Role in the name of Hero
     
    }
    });
-client.on("message", message => {
- if (message.content === ",help-w") {
-	 message.channel.send('**الأوامر العامة على الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
-      .setDescription(`
-	  أوامر عامة
-**
-,weclome-on (channel) ➾ لتفعيل خاصية الترحيب مع صورة جاهزة
-**`)
+
 client.on('message' , async (message) => {
        if(message.content.startsWith(prefix + "rps")) {
               let args = message.content.split(" ").slice(1);
