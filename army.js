@@ -432,17 +432,6 @@ message.channel.send(embed)
 
 
 });
-client.on('guildMemberRemove', member => {
-      let channel = member.guild.channels.find('name', 'welcome');
-        if (!channel) return; 
-        let memberavatar = member.user.avatarURL
-      let embed = new Discord.RichEmbed()
-          .setColor('RED')
-          .setThumbnail(member.avatar)
-          .addField(':x: لقد خرج ',`**[ ${member} ]**`,true)
-          .addField(':man_dancing:  تبقي',`**[ ${member.guild.memberCount} ]**`,true)      
-        channel.send({embed:embed});
-      });
 client.on('message', message => { 
 let prefix = ','
     if (message.content.startsWith(prefix + 'emojilist')) {
