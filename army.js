@@ -420,17 +420,6 @@ message.channel.send(embed)
 
 
 });
-client.on('guildMemberAdd', member => {
-  let channel = member.guild.channels.find('name','welcome');
-     if (!channel) return; 
-          let memberavatar = member.user.avatarURL
-        let embed = new Discord.RichEmbed()
-    .setThumbnail(memberavatar)
-       .setColor('BLUE')
-       .addField(':sunflower:  حياك الله منور السيرفر',`**[ ${member} ]**`,true)
-       .addField(':levitate: انت العضو رقم',`**[ ${member.guild.memberCount} ]**`,true)
-     channel.send({embed:embed});
-});
 client.on('guildMemberRemove', member => {
       let channel = member.guild.channels.find('name', 'welcome');
         if (!channel) return; 
