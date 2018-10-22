@@ -81,8 +81,6 @@ client.on("message", message => {
 
 ,help-c ⇏ اوامر الألوان
 
-,help-w ⇏ أمر الترحيب
-
 	  **`)
    message.channel.sendEmbed(embed)
     
