@@ -191,8 +191,6 @@ You must create a Role in the name of Hero
 
 ,herostart ➾ لتشغيل خاصية الرول الملون
 
-,herostop ➾ لإيقاف الخاصية
-
 **`)
    message.author.sendEmbed(embed)
     
@@ -1787,15 +1785,6 @@ client.on("message", message => {
     message.channel.send("```css\nI've starting```");
   } else {
     message.reply(`You do not have permission to Hero bot. Please contact with owner bot **<@403640956571615243>**`);
-  }
-} else
- 
-if (message.content === prefix + "herostop") {
-  if(allowedUsers.includes(message.author.id)) {
-  message.channel.send("```css\nI've stopped.```");
-  setTimeout(() => { console.log(process.exit(0)); }, 300);
-} else {
-  message.reply(`You do not have permission to Hero bot. Please contact with owner bot **<@403640956571615243>**`);
   }
 }
  
