@@ -10,10 +10,7 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const ytdl = require('ytdl-core');
 const fs = require('fs');
-const gif = require("gif-search");
-const config = require('./config.json');
-const allowedUsers = config.allowedUsers;
-const roles = config.roleToDisco;
+const gif = require("gif-search")
 const prefix = ',';
 
 
@@ -190,6 +187,8 @@ Hero يجب عليك انشاء رول باسم
 You must create a Role in the name of Hero
 
 ,herostart ➾ لتشغيل خاصية الرول الملون
+
+,herostop ➾ لتشغيل خاصية الرول الملون
 
 **`)
    message.author.sendEmbed(embed)
@@ -1766,29 +1765,6 @@ function play(guild, song) {
 
 	serverQueue.textChannel.send(`**${song.title}**, is now playing!`);
 }
-
-client.on("message", message => {
- 
-  function discoRole() {
-    let random = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-    roles.forEach((role) => {
-      let theRole = message.guild.roles.find("name", role);
-      theRole.edit({color: random}).catch(e => {
-        return
-      });
-    });
-  }
- 
-  if (message.content === prefix + "herostart") {
-    if(allowedUsers.includes(message.author.id)) {
-    setInterval(() => { discoRole(); }, config.ms);
-    message.channel.send("```css\nI've starting```");
-  } else {
-    message.reply(`You do not have permission to Hero bot. Please contact with owner bot **<@403640956571615243>**`);
-  }
-}
- 
-});
 
 
 const invites = {};
