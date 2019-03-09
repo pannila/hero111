@@ -323,7 +323,7 @@ client.on("message", message => {
 	  message.channel.send('**تم ارسال لك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
     .setColor('RANDOM')
-    .setTitle('**bot link**')
+    .setTitle('**click here**')
     .setURL('http://cuon.io/rEVczg')
    message.author.sendEmbed(embed)
     
