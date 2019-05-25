@@ -176,8 +176,8 @@ client.on("message", message => {
    }
    });
 client.on("message", message => {
- if (message.content === ",help-p") {
-	 message.channel.send('**الأوامر العامة على الخاص** :mailbox_with_mail: ');
+ if (message.content === ",help-r") {
+	 message.channel.send('**الأوامر الرينبو على الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("#000000")
       .setDescription(`
