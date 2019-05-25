@@ -76,7 +76,7 @@ client.on("message", message => {
 
 ,help-m ⇏ اوامر الموسيقى
 
-,help-c ⇏ اوامر الألوان
+,help-r ⇏ اوامر الألوان
 
 	  **`)
    message.channel.sendEmbed(embed)
@@ -176,20 +176,15 @@ client.on("message", message => {
    }
    });
 client.on("message", message => {
- if (message.content === ",help-c") {
-	 message.channel.send('**اوامر الألوان على الخاص** :mailbox_with_mail: ');
+ if (message.content === ",help-r") {
+	 message.channel.send('**اوامر الرينبو على الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("#000000")
       .setDescription(`
         اوامر الألوان
 **	  
-Hero يجب عليك انشاء رول باسم
-You must create a Role in the name of Hero
-
-,herostart ➾ لتشغيل خاصية الرول الملون
-
-,herostop ➾ لتشغيل خاصية الرول الملون
-
+:لتشغيل خاصية الرينبو
+`` Hero ``فقط يجب عليك انشاء رول باسم
 **`)
    message.author.sendEmbed(embed)
     
