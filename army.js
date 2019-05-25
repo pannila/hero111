@@ -176,20 +176,20 @@ client.on("message", message => {
    }
    });
 client.on("message", message => {
- if (message.content === ",help-r") {
-	 message.channel.send('**اوامر الرينبو على الخاص** :mailbox_with_mail: ');
+ if (message.content === ",help-p") {
+	 message.channel.send('**الأوامر العامة على الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("#000000")
       .setDescription(`
-        اوامر الألوان
+	  أوامر عامة
 **	  
-:لتشغيل خاصية الرينبو
-`` Hero ``فقط يجب عليك انشاء رول باسم
+أنشأ رول باسم
+Hero
 **`)
    message.author.sendEmbed(embed)
     
    }
-   });
+   });   
 
 client.on('message' , async (message) => {
        if(message.content.startsWith(prefix + "rps")) {
