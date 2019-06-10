@@ -1,1 +1,1 @@
-worker: node army.js
+web: node army.js
