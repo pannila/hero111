@@ -76,8 +76,6 @@ client.on("message", message => {
 
 ,help-m ⇏ اوامر الموسيقى
 
-,help-r ⇏ اوامر الألوان
-
 	  **`)
    message.channel.sendEmbed(embed)
     
@@ -174,23 +172,7 @@ client.on("message", message => {
    message.author.sendEmbed(embed)
     
    }
-   });
-client.on("message", message => {
- if (message.content === ",help-r") {
-	 message.channel.send('**الأوامر الرينبو على الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
-      .setDescription(`
-	  أوامر عامة
-**	  
-أنشأ رول باسم
-Hero
-**`)
-   message.author.sendEmbed(embed)
-    
-   }
-   });   
-
+   }); 
 client.on('message' , async (message) => {
        if(message.content.startsWith(prefix + "rps")) {
               let args = message.content.split(" ").slice(1);
